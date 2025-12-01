@@ -42,6 +42,11 @@ public class PlatesCounter : BaseCounter
                 platesSpawnedAmount--;
                 KitchenObject.SpawnKitchenObject(plateKitchenObjectSO, player);
 
+                if (platesSpawnedAmount == platesSpawnedAmountMax)
+                { 
+                    spawnPlateTimer = 0f;
+                }
+
                 OnPlateRemoved?.Invoke(this, EventArgs.Empty);
             }
         }
