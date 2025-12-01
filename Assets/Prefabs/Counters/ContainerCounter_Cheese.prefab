@@ -11,8 +11,18 @@ PrefabInstance:
     - target: {fileID: 3396373973501787234, guid: e0d256a5c35d0e648b3d75cae41ba9de,
         type: 3}
       propertyPath: m_Name
-      value: ContainerCounter
+      value: ContainerCounter_Cheese
       objectReference: {fileID: 0}
+    - target: {fileID: 6242405805901021816, guid: e0d256a5c35d0e648b3d75cae41ba9de,
+        type: 3}
+      propertyPath: baseCounter
+      value: 
+      objectReference: {fileID: 7945783552734759334}
+    - target: {fileID: 7652588622374268581, guid: e0d256a5c35d0e648b3d75cae41ba9de,
+        type: 3}
+      propertyPath: containerCounter
+      value: 
+      objectReference: {fileID: 7945783552734759334}
     - target: {fileID: 7811375264438008954, guid: e0d256a5c35d0e648b3d75cae41ba9de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,3 +78,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0d256a5c35d0e648b3d75cae41ba9de, type: 3}
+--- !u!114 &7945783552734759334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3002275559522265120, guid: e0d256a5c35d0e648b3d75cae41ba9de,
+    type: 3}
+  m_PrefabInstance: {fileID: 5183398787897155974}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e67fa86336a1e3498d0d235235865aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999a505694097347b0b95d524917541, type: 3}
-  m_Name: CheeseBlock
+  m_Script: {fileID: 11500000, guid: ec2174ecdbeb08d40b213adc8bba739b, type: 3}
+  m_Name: Cabbage-CabbageSlices
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3806216313943975827, guid: d998f44bf53c0ac408a379e16e7516fd, type: 3}
-  sprite: {fileID: 21300000, guid: da2d04fe27b94e34ea0b624569b48a6f, type: 3}
-  objectName: Cheese
+  input: {fileID: 11400000, guid: c1167fdc3e36b0845b1d39992d91dd3b, type: 2}
+  output: {fileID: 11400000, guid: 5847e6a9e47191148a031e2651b3c8bb, type: 2}
+  cuttingProgressMax: 5
