@@ -45,6 +45,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
     private void Update()
     {
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
         HandleMovement();
         HandleInteractions();
         //Debugging->Debug.DrawLine(transform.position, transform.position + lastInteractDir * INTERACT_DISTANCE, Color.red);
