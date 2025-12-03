@@ -6,8 +6,16 @@ using UnityEngine;
 
 public class GameStartCountdownUI : MonoBehaviour
 {
+    private const string NUMBER_POPUP = "NumberPopup";
+
     [SerializeField] private TextMeshProUGUI countdownUI;
 
+    private Animator animator;
+    private int previousCountdownNumber;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Start()
     {
         KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
@@ -16,7 +24,14 @@ public class GameStartCountdownUI : MonoBehaviour
 
     private void Update()
     {
-        countdownUI.text = Mathf.Ceil(KitchenGameManager.Instance.GetCountdownToStartTimer()).ToString();//"#.##" "F2"
+        int countdownnumber = Mathf.CeilToInt(KitchenGameManager.Instance.GetCountdownToStartTimer());//"#.##" "F2"
+        countdownUI.text = countdownnumber.ToString();
+        if(previousCountdownNumber != countdownnumber)
+        {
+            previousCountdownNumber = countdownnumber;
+            animator.SetTrigger(NUMBER_POPUP);
+            SoundManager.Instance.PlayCountdownSound();
+        }
     }
 
     private void KitchenGameManager_OnStateChanged(object sender, EventArgs e)
